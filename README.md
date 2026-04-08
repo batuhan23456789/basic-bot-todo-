@@ -1,2 +1,2 @@
-# basic-bot-todo-
-bot bukadar,bir kedi
+# basic-bot-Meowdo-
+İşlem yapabilen bir kedi ama aynı zamanda Todo cosplay yapıyor, ne kadar ilginç???
