@@ -5,7 +5,7 @@ from discord.ext import commands
 intents = discord.Intents.default()
 intents.message_content = True
 
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 
 @bot.event
 async def on_ready():
@@ -19,7 +19,7 @@ async def hello(ctx):
 
 @bot.command()
 async def help(ctx):
-    await ctx.send(f'')
+    await ctx.send(f'Malesef olmadı :( ')
 
 @bot.command()
 async def cıkart(ctx, left: int, right: int):
@@ -28,8 +28,10 @@ async def cıkart(ctx, left: int, right: int):
 
 @bot.command()
 async def bol(ctx, left: int, right: int):
-    """Adds two numbers together."""
-    await ctx.send(left + right)
+    if right == 0:
+        await ctx.send("Bir sayı sıfıra bölünemez!")
+    else:
+        await ctx.send(left / right)
 
 @bot.command()
 async def carp(ctx, left: int, right: int):
